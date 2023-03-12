@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 import csv
 
-#Pizza superclass
-class Pizza:
 
+class Pizza:
+#Pizza superclass
     def __init__(self, descp, costp, namep) -> None:
         super().__init__()
         self.description = descp
