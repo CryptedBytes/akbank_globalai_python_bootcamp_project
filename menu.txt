@@ -1,0 +1,13 @@
+* Lütfen Bir Pizza Tabanı Seçiniz:
+1: Klasik (80 TL)
+2: Margarita (55 TL)
+3: TürkPizza (75 TL)
+4: Sade Pizza (40 TL)
+* ve seçeceğiniz sos:
+11: Zeytin (Pizza fiyatına ek 5 TL)
+12: Mantarlar (Pizza fiyatına ek 20 TL)
+13: Keçi Peyniri (Pizza fiyatına ek 25 TL)
+14: Et (Pizza fiyatına ek 40 TL)
+15: Soğan (Pizza fiyatına ek 7 TL)
+16: Mısır (Pizza fiyatına ek 5 TL)
+* Teşekkür ederiz!
