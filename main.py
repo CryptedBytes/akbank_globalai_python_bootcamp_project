@@ -4,7 +4,7 @@ import csv
 
 
 class Pizza:
-#Pizza superclass
+    # Pizza superclass
     def __init__(self, descp, costp, namep) -> None:
         super().__init__()
         self.description = descp
@@ -64,13 +64,13 @@ class SadePizza(Pizza):
 class Decorator(Pizza):
     # Decorator super class
 
-    def __init__(self, descp, costp, namep, aa) -> None:
+    def __init__(self, descp, costp, namep, pizzvarp) -> None:
         # super().__init__()
         self.decorator_description = descp
         self.decorator_cost = costp
         self.decorator_name = namep
-        Pizza = aa
-        super().__init__(aa.description, aa.cost, aa.name)
+        Pizza = pizzvarp
+        super().__init__(pizzvarp.description, pizzvarp.cost, pizzvarp.name)
 
     #Getter functions for encapsulation principle of OOP.
     def get_cost(self):
@@ -91,8 +91,8 @@ class Zeytin(Decorator):
     decorator_cost = 5
     decorator_name = 'Zeytin'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class Mantar(Decorator):
@@ -101,8 +101,8 @@ class Mantar(Decorator):
     decorator_cost = 20
     decorator_name = 'Mantar'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class KeciPeyniri(Decorator):
@@ -111,8 +111,8 @@ class KeciPeyniri(Decorator):
     decorator_cost = 25
     decorator_name = 'KeciPeyniri'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class Et(Decorator):
@@ -121,8 +121,8 @@ class Et(Decorator):
     decorator_cost = 40
     decorator_name = 'Et'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class Sogan(Decorator):
@@ -131,8 +131,8 @@ class Sogan(Decorator):
     decorator_cost = 7
     decorator_name = 'Sogan'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class Misir(Decorator):
@@ -141,8 +141,8 @@ class Misir(Decorator):
     decorator_cost = 5
     decorator_name = 'Misir'
 
-    def __init__(self, aa) -> None:
-        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, aa)
+    def __init__(self, pizzvarp) -> None:
+        super().__init__(self.decorator_desc, self.decorator_cost, self.decorator_name, pizzvarp)
 
 
 class Main:
@@ -177,6 +177,9 @@ class Main:
 
 
     def main():
+        # main func
+
+        # read menu from menu.txt file and print it
         print('Menu:')
 
         file = open("menu.txt", "r", encoding="utf-8")
@@ -184,6 +187,7 @@ class Main:
         file.close()
         print(menu)
 
+        # variables required
         isPizzaSelected = False
         isDecorationSelected = False
         customerName = None
@@ -270,11 +274,12 @@ class Main:
         print('Kredi karti sifresi: ')
         creditCardPswd = input()
 
+        #write to database
         Main.writeToCsv(None, customerName, TC_ID, creditCardNum, creditCardPswd, (pizza.get_name() + ', ' + decoration.get_name()), total)
 
-        print('Siparisiniz icin tesekkurler.')
+        print('Siparisiniz icin tesekkurler, veritabanina islendi.')
 
 
-
+#call the main function
 Main.main()
 
